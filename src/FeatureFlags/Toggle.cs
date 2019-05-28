@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace FeatureFlags
 {
-    public class Toggle : IToggle, IToggleService
+    public class Toggle : IToggle
     {
         private readonly IToggleService _toggleService;
 
