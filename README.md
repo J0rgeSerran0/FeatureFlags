@@ -16,7 +16,7 @@ You should know that:
     - *IsEnabled* is the value of the *Toggle* (on/off) where off is the default value
 
 You will have to take two actions on your code only:
-- Implement the **IToggleService** interface to manage the *Toggles* (load them, release them and refresh them) from the source where you have them.
+- Implement the **IToggleService** interface to manage the *Toggles* (load, get, release and refresh the *Toggles*) from the source where you have them.
 - Use the **Toggle** class on your app to manage the *Toggles* and know if a *Toggle* is enabled or not.
 
 Implement the library is quick and easy as you can see.
