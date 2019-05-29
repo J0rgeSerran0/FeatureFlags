@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FeatureFlags\FeatureFlags.csproj" />
+    <ProjectReference Include="..\..\DotNetCore.FeatureFlags\DotNetCore.FeatureFlags.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace FeatureFlags
+namespace DotNetCore.FeatureFlags
 {
     public class Toggle : IToggle
     {

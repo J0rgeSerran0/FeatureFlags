@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeatureFlags", "FeatureFlags.csproj", "{FF549D6A-FC45-4CDF-A191-69304B25D463}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.FeatureFlags", "DotNetCore.FeatureFlags.csproj", "{FF549D6A-FC45-4CDF-A191-69304B25D463}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{0E226E19-6000-43C0-B46C-0A722593ACFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToggles", "..\Sample\MyToggles\MyToggles.csproj", "{B2F920E4-0BB8-4B1A-8D0C-0EFBBE8DB63F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyToggles", "..\Sample\MyToggles\MyToggles.csproj", "{B2F920E4-0BB8-4B1A-8D0C-0EFBBE8DB63F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleToggleApp", "..\Sample\ConsoleToggleApp\ConsoleToggleApp.csproj", "{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleToggleApp", "..\Sample\ConsoleToggleApp\ConsoleToggleApp.csproj", "{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

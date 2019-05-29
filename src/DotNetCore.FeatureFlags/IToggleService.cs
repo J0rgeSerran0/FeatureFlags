@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FeatureFlags
+namespace DotNetCore.FeatureFlags
 {
     public interface IToggleService
     {

@@ -1,4 +1,4 @@
-﻿namespace FeatureFlags
+﻿namespace DotNetCore.FeatureFlags
 {
     public interface IToggle : IToggleService
     {
