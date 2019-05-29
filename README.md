@@ -21,6 +21,11 @@ You will have to take two actions on your code only:
 
 Implement the library is quick and easy as you can see.
 
+# NuGet Package
+You can install the [Nuget Package of *DotNEtCore.FeatureFlags* from here](https://www.nuget.org/packages/DotNetCore.FeatureFlags/)
+
+> Note: the version of this package is a preview version to align it with the .Net Core 3 version.
+
 # References
 [FeatureToggle of Martin Fowler](https://martinfowler.com/bliki/FeatureToggle.html)
 
