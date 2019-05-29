@@ -1,7 +1,7 @@
 # **DotNetCore.FeatureFlags**
 Quick and easy implementation of Feature Toggles or Feature Flags in .Net Core 3.0 applications
 
-## NuGet Packages of FeatureFlags
+## NuGet Packages
 [DotNetCore.FeatureFlags](https://www.nuget.org/packages/DotNetCore.FeatureFlags/)
 
 ## Compatibility
