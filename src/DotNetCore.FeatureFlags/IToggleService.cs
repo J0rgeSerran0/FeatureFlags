@@ -4,7 +4,8 @@ namespace DotNetCore.FeatureFlags
 {
     public interface IToggleService
     {
-        IList<ToggleSettings> GetToggleSettings();
+        IList<ToggleSettings> GetAllToggleSettings();
+        ToggleSettings GetToggleSettingsBy(string feature);
         void RefreshToggles();
         void ReleaseToggles();
     }

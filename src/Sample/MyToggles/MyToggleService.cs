@@ -1,6 +1,7 @@
-﻿using FeatureFlags;
+﻿using DotNetCore.FeatureFlags;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace MyToggles
 {
@@ -18,7 +19,7 @@ namespace MyToggles
             _toggleSettings = null;
         }
 
-        public IList<ToggleSettings> GetToggleSettings()
+        public IList<ToggleSettings> GetAllToggleSettings()
         {
             return _toggleSettings;
         }
@@ -35,6 +36,11 @@ namespace MyToggles
         public void ReleaseToggles()
         {
             _toggleSettings = new List<ToggleSettings>();
+        }
+
+        public ToggleSettings GetToggleSettingsBy(string feature)
+        {
+            return _toggleSettings.Where(q => q.Feature == feature).SingleOrDefault();
         }
     }
 }

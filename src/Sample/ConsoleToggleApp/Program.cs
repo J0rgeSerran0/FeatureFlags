@@ -1,4 +1,4 @@
-﻿using FeatureFlags;
+﻿using DotNetCore.FeatureFlags;
 using Microsoft.Extensions.DependencyInjection;
 using MyToggles;
 

@@ -1,4 +1,4 @@
-﻿using FeatureFlags;
+﻿using DotNetCore.FeatureFlags;
 using System;
 
 namespace ConsoleToggleApp
@@ -12,7 +12,7 @@ namespace ConsoleToggleApp
 
             // Show the Toggles loaded
             Console.ForegroundColor = ConsoleColor.Green;
-            var toggleSettings = toggle.GetToggleSettings();
+            var toggleSettings = toggle.GetAllToggleSettings();
             foreach (var settings in toggleSettings)
             {
                 Console.WriteLine($"\t{settings.Feature} - {settings.Description} - {settings.IsEnabled}");
