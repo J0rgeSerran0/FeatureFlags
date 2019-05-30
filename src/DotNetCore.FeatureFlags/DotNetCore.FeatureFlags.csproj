@@ -8,8 +8,9 @@
     <PackageIconUrl>https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/icon_toggle.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/J0rgeSerran0/FeatureFlags</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>1.0.1-preview5</Version>
-    <PackageReleaseNotes>Quick and easy implementation of FeatureFlags in .Net Core 3.0 applications</PackageReleaseNotes>
+    <Version>1.0.2-preview5</Version>
+    <PackageReleaseNotes>GetToggleSettings method has been renamed as GetAllToggleSettings
+GetToggleSettingsBy method has been added for a better performance when we want to get the ToggleSettings of a feature</PackageReleaseNotes>
     <PackageTags>FeatureToggles, FeatureFlags, Toggles</PackageTags>
     <PackageId>DotNetCore.FeatureFlags</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
