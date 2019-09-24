@@ -7,20 +7,23 @@ namespace DotNetCore.FeatureFlags
     {
         private readonly IToggleService _toggleService;
 
+        public int Count { get { return _toggleService.Count; } }
+
         public Toggle(IToggleService toggleService)
         {
             _toggleService = toggleService;
         }
 
-        public ToggleSettings GetToggleSettingsBy(string feature)
-        {
-            return _toggleService.GetToggleSettingsBy(feature);
-        }
+        public bool ExistsToggle(string feature) => _toggleService.ExistsToggle(feature);
+
+        public IList<ToggleSettings> GetAllToggleSettings() => _toggleService.GetAllToggleSettings().ToList();
+
+        public ToggleSettings GetToggleSettingsBy(string feature) => _toggleService.GetToggleSettingsBy(feature);
 
         public bool IsEnabled(string feature)
         {
             var toggleSettings = GetToggleSettingsBy(feature);
-            return toggleSettings == null ? false : toggleSettings.IsEnabled;            
+            return toggleSettings == null ? false : toggleSettings.IsEnabled;
         }
 
         public void RefreshToggles()
@@ -33,9 +36,5 @@ namespace DotNetCore.FeatureFlags
             _toggleService.ReleaseToggles();
         }
 
-        public IList<ToggleSettings> GetAllToggleSettings()
-        {
-            return _toggleService.GetAllToggleSettings().ToList();
-        }
     }
 }

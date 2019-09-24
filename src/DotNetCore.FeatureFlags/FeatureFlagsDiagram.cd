@@ -1,31 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="DotNetCore.FeatureFlags.Toggle">
-    <Position X="3.25" Y="1" Width="2.5" />
+    <Position X="2.5" Y="0.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAgAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAUAAAAAEAAAQAAAAAAAAAAQIAAAAAAAA=</HashCode>
       <FileName>Toggle.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="DotNetCore.FeatureFlags.ToggleSettings">
-    <Position X="6" Y="1" Width="2.25" />
+    <Position X="5.25" Y="0.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAAAEAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>ToggleSettings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="DotNetCore.FeatureFlags.IToggle">
-    <Position X="1.25" Y="3" Width="1.75" />
+    <Position X="0.5" Y="3.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IToggle.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="DotNetCore.FeatureFlags.IToggleService">
-    <Position X="1.25" Y="1" Width="1.75" />
+    <Position X="0.5" Y="0.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAUAAAAAEAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>IToggleService.cs</FileName>
     </TypeIdentifier>
   </Interface>

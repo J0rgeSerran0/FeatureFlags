@@ -5,61 +5,116 @@ namespace ConsoleToggleApp
 {
     public class ToggleDemo
     {
+        private readonly IToggle _toggle;
+
         public ToggleDemo(IToggle toggle)
         {
+            _toggle = toggle;
+
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("FeatureFlags Loaded!");
-
-            // Show the Toggles loaded
-            Console.ForegroundColor = ConsoleColor.Green;
-            var toggleSettings = toggle.GetAllToggleSettings();
-            foreach (var settings in toggleSettings)
-            {
-                Console.WriteLine($"\t{settings.Feature} - {settings.Description} - {settings.IsEnabled}");
-            }
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine($"Toggles Configurated: {_toggle.Count}");
+            // Show the Toggles loaded
+            ShowTogglesLoaded();
 
             // Check some Toggles to look for if they are enabled or not
-            var isEnabled = false;
+            CheckTogglesStatuses();
 
-            isEnabled = toggle.IsEnabled("OtherFoo");
-            Console.WriteLine($"\tOtherFoo is {isEnabled}");
+            // Check if a Toggle exists or not
+            CheckIfToggleIsEnabled("Foo");
 
-            isEnabled = toggle.IsEnabled("Foo");
-            Console.WriteLine($"\tFoo is {isEnabled}");
-
-            isEnabled = toggle.IsEnabled("NotExists");
-            Console.WriteLine($"\tNotExists is {isEnabled}");
-
-            isEnabled = toggle.IsEnabled(String.Empty);
-            Console.WriteLine($"\tStringEmpty is {isEnabled}");
+            // Check if a Toggle exists or not
+            CheckIfToggleExists("NotExists");
 
             // Released the Toggles
-            toggle.ReleaseToggles();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine();
-            Console.WriteLine("FeatureFlags Released!");
-            Console.ForegroundColor = ConsoleColor.Cyan;
+            ReleaseToggles();
 
-            isEnabled = toggle.IsEnabled("Foo");
-            Console.WriteLine($"\tFoo is {isEnabled}");
-            Console.WriteLine();
+            // Check some Toggles to look for if they are enabled or not
+            CheckTogglesStatuses();
 
             // Refresh the Toggles
-            toggle.RefreshToggles();
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("FeatureFlags Reloaded!");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-
-            isEnabled = toggle.IsEnabled("Foo");
-            Console.WriteLine($"\tFoo is {isEnabled}");
-            Console.WriteLine();
-
+            RefreshToggles();
+            
+            // Check some Toggles to look for if they are enabled or not
+            CheckTogglesStatuses();
 
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.WriteLine("Press any key to close");
             Console.ReadKey();
+        }
+
+        private void ShowTogglesLoaded()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            var toggleSettings = _toggle.GetAllToggleSettings();
+            foreach (var settings in toggleSettings)
+            {
+                Console.WriteLine($"\t{settings.Feature} - {settings.Description} - {settings.IsEnabled}");
+            }
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+        }
+
+        private void CheckTogglesStatuses()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("Checking Toggles Statuses");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            var isEnabled = false;
+
+            isEnabled = _toggle.IsEnabled("OtherFoo");
+            Console.WriteLine($"\tOtherFoo is {isEnabled}");
+
+            isEnabled = _toggle.IsEnabled("Foo");
+            Console.WriteLine($"\tFoo is {isEnabled}");
+
+            isEnabled = _toggle.IsEnabled("NotExists");
+            Console.WriteLine($"\tNotExists is {isEnabled}");
+
+            isEnabled = _toggle.IsEnabled(String.Empty);
+            Console.WriteLine($"\tStringEmpty is {isEnabled}");
+
+            Console.WriteLine();
+        }
+
+        private void CheckIfToggleIsEnabled(string feature)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Is Enabled the Toggle '{feature}'? {_toggle.IsEnabled(feature)}");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine();
+        }
+
+        private void CheckIfToggleExists(string feature)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine($"Exists the Toggle '{feature}'? {_toggle.ExistsToggle(feature)}");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+        }
+
+        private void ReleaseToggles()
+        {
+            _toggle.ReleaseToggles();
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("FeatureFlags Released!");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+        }
+
+        private void RefreshToggles()
+        {
+            _toggle.RefreshToggles();
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("FeatureFlags Reloaded!");
+            Console.ForegroundColor = ConsoleColor.Cyan;
         }
     }
 }

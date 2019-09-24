@@ -9,6 +9,8 @@ namespace MyToggles
     {
         private IList<ToggleSettings> _toggleSettings = new List<ToggleSettings>();
 
+        public int Count { get { return _toggleSettings.Count; } }
+
         public MyToggleService()
         {
             RefreshToggles();
@@ -19,10 +21,9 @@ namespace MyToggles
             _toggleSettings = null;
         }
 
-        public IList<ToggleSettings> GetAllToggleSettings()
-        {
-            return _toggleSettings;
-        }
+        public bool ExistsToggle(string feature) => GetToggleSettingsBy(feature) != null;
+
+        public IList<ToggleSettings> GetAllToggleSettings() => _toggleSettings;
 
         public void RefreshToggles()
         {
@@ -33,14 +34,12 @@ namespace MyToggles
             _toggleSettings = toggleSettings;
         }
 
+        public ToggleSettings GetToggleSettingsBy(string feature) => _toggleSettings.Where(q => q.Feature == feature).SingleOrDefault();
+
         public void ReleaseToggles()
         {
             _toggleSettings = new List<ToggleSettings>();
         }
 
-        public ToggleSettings GetToggleSettingsBy(string feature)
-        {
-            return _toggleSettings.Where(q => q.Feature == feature).SingleOrDefault();
-        }
     }
 }
