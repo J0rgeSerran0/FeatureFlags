@@ -1,5 +1,5 @@
 # Introduction
-Quick and easy implementation of *FeatureFlags* in .Net Core applications
+Quick and easy implementation of *FeatureFlags* in .Net Core, ASP.NET Core or Azure projects.
 
 In the code you will see a sample to implement *FeatureFlags* on your .NET Core 3.x applications.
 
@@ -21,10 +21,14 @@ You will have to take two actions on your code only:
 
 Implement the library is quick and easy as you can see.
 
+# Samples (source code)
+There are some samples using this NuGet Package.
+- A console application
+- An ASP.NET 3.0 MVC Web App
+You will find the  samples [here](https://github.com/J0rgeSerran0/FeatureFlags/tree/master/src/Sample)
+
 # NuGet Package
 You can install the [Nuget Package of *DotNEtCore.FeatureFlags* from here](https://www.nuget.org/packages/DotNetCore.FeatureFlags/)
-
-> Note: the version of this package is a preview version to align it with the .Net Core 3 version.
 
 # References
 [FeatureToggle of Martin Fowler](https://martinfowler.com/bliki/FeatureToggle.html)
