@@ -1,0 +1,55 @@
+﻿@model List<ToggleModel>
+
+@{
+    ViewData["Title"] = "Settings Page";
+}
+
+<h3><font color="#D3BF31">@ViewData["Title"]</font></h3>
+
+<p><font color="#616A6B">Use this page to modify the settings for your Toggles</font></p>
+
+@Html.ActionLink("Reload Toggles", "ReloadToggles", "Home", null, new { @style = "color:#B03A2E;" }) | 
+@Html.ActionLink("Release Toggles", "ReleaseToggles", "Home", null, new { @style = "color:#B03A2E;" })
+
+<br /><br />
+
+<table class="table">
+    <tr>
+        <th>
+            Feature
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Is Enabled
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Feature)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsEnabled)
+            </td>
+            <td>
+                @if (item.IsEnabled)
+                {
+                    @Html.ActionLink("Disable", "ToggleToOff", "Home", new { feature = item.Feature }, new { @style = "color:#B03A2E;" })
+                }
+                else
+                {
+                    @Html.ActionLink("Enable", "ToggleToOn", "Home", new { feature = item.Feature }, new { @style = "color:#239B56;" })
+                }
+            </td>
+        </tr>
+    }
+
+</table>

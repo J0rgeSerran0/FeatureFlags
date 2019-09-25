@@ -26,15 +26,14 @@ namespace DotNetCore.FeatureFlags
             return toggleSettings == null ? false : toggleSettings.IsEnabled;
         }
 
-        public void RefreshToggles()
+        public void ReloadToggles()
         {
-            _toggleService.RefreshToggles();
+            _toggleService.ReloadToggles();
         }
 
         public void ReleaseToggles()
         {
             _toggleService.ReleaseToggles();
         }
-
     }
 }

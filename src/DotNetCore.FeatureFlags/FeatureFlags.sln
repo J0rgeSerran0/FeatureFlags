@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyToggles", "..\Sample\MyTo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleToggleApp", "..\Sample\ConsoleToggleApp\ConsoleToggleApp.csproj", "{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebToggleApp", "..\Sample\WebToggleApp\WebToggleApp.csproj", "{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B2F920E4-0BB8-4B1A-8D0C-0EFBBE8DB63F} = {0E226E19-6000-43C0-B46C-0A722593ACFF}
 		{BF6D7258-C5DA-4A6F-B25D-C81B9EEF420C} = {0E226E19-6000-43C0-B46C-0A722593ACFF}
+		{84CBDA93-7C1F-46FD-B951-B1FFC94B3A50} = {0E226E19-6000-43C0-B46C-0A722593ACFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C33B6D16-76B0-47D4-8B80-BA1DBCD98F23}

@@ -109,7 +109,7 @@ namespace ConsoleToggleApp
 
         private void RefreshToggles()
         {
-            _toggle.RefreshToggles();
+            _toggle.ReloadToggles();
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Yellow;

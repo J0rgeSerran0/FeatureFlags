@@ -4,7 +4,7 @@
     {
         public string Feature { get; }
         public string Description { get; }
-        public bool IsEnabled { get; }
+        public bool IsEnabled { get; set; }
 
         public ToggleSettings(string feature) : this(feature, string.Empty) { }
 

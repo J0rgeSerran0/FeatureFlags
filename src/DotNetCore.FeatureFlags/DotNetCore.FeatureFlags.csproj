@@ -8,8 +8,8 @@
     <PackageIconUrl>https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/icon_toggle.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/J0rgeSerran0/FeatureFlags</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.0</Version>
-    <PackageReleaseNotes>Added ExistsToggle to ask about an specific toggle</PackageReleaseNotes>
+    <Version>3.0.1</Version>
+    <PackageReleaseNotes>Now, the IsEnabled property is not readonly to give more flexibility</PackageReleaseNotes>
     <PackageTags>FeatureToggles, FeatureFlags, Toggles, Flag, Toggle</PackageTags>
     <PackageId>DotNetCore.FeatureFlags</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3><font color="#91D331">@ViewData["Title"]</font></h3>
+
+<hr />
+
+<p><h4><font color="#616A6B">The Feature Toggle</font></h4></p>
+
+@if (@Model)
+{
+    <p><h3><font color="#239B56">IS ENABLED</font></h3></p>
+}
+else
+{
+    <p><h3><font color="#B03A2E">IS DISABLED</font></h3></p>
+}

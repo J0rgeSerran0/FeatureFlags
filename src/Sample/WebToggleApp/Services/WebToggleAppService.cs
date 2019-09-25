@@ -3,15 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyToggles
+namespace WebToggleApp.Services
 {
-    public class MyToggleService : IDisposable, IToggleService
+    public class WebToggleAppService : IDisposable, IToggleService
     {
         private IList<ToggleSettings> _toggleSettings = new List<ToggleSettings>();
 
         public int Count { get { return _toggleSettings.Count; } }
 
-        public MyToggleService()
+        public WebToggleAppService()
         {
             ReloadToggles();
         }
@@ -28,8 +28,7 @@ namespace MyToggles
         public void ReloadToggles()
         {
             var toggleSettings = new List<ToggleSettings>();
-            toggleSettings.Add(new ToggleSettings("Foo", "Toggle Foo", true));
-            toggleSettings.Add(new ToggleSettings("OtherFoo", "Toggle Other Foo", false));
+            toggleSettings.Add(new ToggleSettings("IndexNewFeature", "New feature in the home/index page", false));
 
             _toggleSettings = toggleSettings;
         }

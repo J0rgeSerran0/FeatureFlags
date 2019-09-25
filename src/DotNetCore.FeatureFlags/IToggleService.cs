@@ -8,7 +8,7 @@ namespace DotNetCore.FeatureFlags
         bool ExistsToggle(string feature);
         IList<ToggleSettings> GetAllToggleSettings();
         ToggleSettings GetToggleSettingsBy(string feature);
-        void RefreshToggles();
+        void ReloadToggles();
         void ReleaseToggles();
     }
 }
