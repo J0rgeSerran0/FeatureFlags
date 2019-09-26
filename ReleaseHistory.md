@@ -2,19 +2,19 @@
 
 ## **Release History**
 
-<img src="https://img.shields.io/badge/v1.0.0-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-orange" />
+<img src="https://img.shields.io/badge/v1.0.0-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-inactive" />
 * &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://img.shields.io/badge/NEW-success" /> Released a public beta version aligned with .NET Core 3.0 preview 5
 
 ----
 
-<img src="https://img.shields.io/badge/v1.0.1-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-orange" />
+<img src="https://img.shields.io/badge/v1.0.1-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-inactive" />
 * &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://img.shields.io/badge/FIXED-blue" /> Resolved minor issues detected in v1.0.0
 
 ----
 
-<img src="https://img.shields.io/badge/v1.0.2-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-orange" />
+<img src="https://img.shields.io/badge/v1.0.2-preview5-orange" /> <img src="https://img.shields.io/badge/05/2019-blueviolet" /> <img src="https://img.shields.io/badge/public beta version-inactive" />
 * &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://img.shields.io/badge/FIXED-blue" /> Resolved minor issues detected in v1.0.1
 
