@@ -30,7 +30,7 @@
 
 ----
 
-<img src="https://img.shields.io/badge/v3.0.1-green" /> <img src="https://img.shields.io/badge/09/2019-blueviolet" /> <img src="https://img.shields.io/badge/final version-green" />
+<img src="https://img.shields.io/badge/v3.0.1-green" /> <img src="https://img.shields.io/badge/09/2019-blueviolet" />
 * &nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://img.shields.io/badge/IMPROVED-9cf" /> The property **IsEnabled** is not readonly now, so you could change the state of this property directly
 * &nbsp;&nbsp;&nbsp;&nbsp;
