@@ -8,6 +8,10 @@ In the code you will see a sample to implement *FeatureFlags* on your .NET Core 
 
 This implementation is quick easy, and you will have to implement the **IToggleService** only to manage the *Toggles*. 
 
+# Release History
+
+[Access to the Release History](ReleaseHistory.md)
+
 # How-To
 In the next image you will see the projet's class diagram.
 ![screenshot](https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/class_diagram.png) 
