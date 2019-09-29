@@ -11,10 +11,7 @@ namespace WebToggleApp.Services
 
         public int Count { get { return _toggleSettings.Count; } }
 
-        public WebToggleAppService()
-        {
-            ReloadToggles();
-        }
+        public WebToggleAppService() => ReloadToggles();
 
         public void Dispose()
         {
@@ -25,6 +22,8 @@ namespace WebToggleApp.Services
 
         public IList<ToggleSettings> GetAllToggleSettings() => _toggleSettings;
 
+        public ToggleSettings GetToggleSettingsBy(string feature) => _toggleSettings.Where(q => q.Feature == feature).SingleOrDefault();
+
         public void ReloadToggles()
         {
             var toggleSettings = new List<ToggleSettings>();
@@ -32,8 +31,6 @@ namespace WebToggleApp.Services
 
             _toggleSettings = toggleSettings;
         }
-
-        public ToggleSettings GetToggleSettingsBy(string feature) => _toggleSettings.Where(q => q.Feature == feature).SingleOrDefault();
 
         public void ReleaseToggles()
         {

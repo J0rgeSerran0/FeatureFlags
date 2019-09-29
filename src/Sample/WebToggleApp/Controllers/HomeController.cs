@@ -10,48 +10,42 @@ namespace WebToggleApp.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IToggleService _toggleService;
+        private readonly IToggle _toggle;
 
-        public HomeController(ILogger<HomeController> logger, IToggleService toggleService)
+        public HomeController(ILogger<HomeController> logger, IToggle toggle)
         {
             _logger = logger;
-            _toggleService = toggleService;
+            _toggle = toggle;
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        public IActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 
         public IActionResult Index()
         {
             var feature = "IndexNewFeature";
             var isEnabled = false;
-
-            if (_toggleService.ExistsToggle(feature))
+            
+            if (_toggle.ExistsToggle(feature))
             {
-                isEnabled = _toggleService.GetToggleSettingsBy(feature).IsEnabled;
+                isEnabled = _toggle.GetToggleSettingsBy(feature).IsEnabled;
             }
 
             return View(isEnabled);
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
+        public IActionResult About() => View();
 
         public IActionResult ReloadToggles()
         {
-            _toggleService.ReloadToggles();
+            _toggle.ReloadToggles();
 
             return RedirectToAction("Index");
         }
 
         public IActionResult ReleaseToggles()
         {
-            _toggleService.ReleaseToggles();
+            _toggle.ReleaseToggles();
 
             return RedirectToAction("Index");
         }
@@ -60,7 +54,7 @@ namespace WebToggleApp.Controllers
         {
             var myToggles = new List<ToggleModel>();
 
-            var toggles = _toggleService.GetAllToggleSettings();
+            var toggles = _toggle.GetAllToggleSettings();
 
             foreach (var toggle in toggles)
             {
@@ -73,9 +67,9 @@ namespace WebToggleApp.Controllers
 
         public IActionResult ToggleToOn(string feature)
         {
-            if (_toggleService.ExistsToggle(feature))
+            if (_toggle.ExistsToggle(feature))
             {
-                var toggle = _toggleService.GetToggleSettingsBy(feature);
+                var toggle = _toggle.GetToggleSettingsBy(feature);
                 toggle.IsEnabled = true;
             }
 
@@ -84,9 +78,9 @@ namespace WebToggleApp.Controllers
 
         public IActionResult ToggleToOff(string feature)
         {
-            if (_toggleService.ExistsToggle(feature))
+            if (_toggle.ExistsToggle(feature))
             {
-                var toggle = _toggleService.GetToggleSettingsBy(feature);
+                var toggle = _toggle.GetToggleSettingsBy(feature);
                 toggle.IsEnabled = false;
             }
 
