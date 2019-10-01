@@ -28,6 +28,7 @@ namespace WebToggleApp.Services
         {
             var toggleSettings = new List<ToggleSettings>();
             toggleSettings.Add(new ToggleSettings("IndexNewFeature", "New feature in the home/index page", false));
+            toggleSettings.Add(new ToggleSettings("MyOtherFeature", "Other foo feature", false));
 
             _toggleSettings = toggleSettings;
         }
