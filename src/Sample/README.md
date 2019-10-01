@@ -10,3 +10,7 @@
 - The source code of this app can be found in the [**WebToggleApp**](https://github.com/J0rgeSerran0/FeatureFlags/tree/master/src/Sample/WebToggleApp) folder.
 - This sample has a *Home* page that will change depending of the *Feature Toggle* value.
 - In the *Settings* view of the Web App, you can list the *Feature Toggles* and *enable* or *disable* a toggle, or *reload* and *release* them.
+
+![screenshot](https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/Sample_WebToggleApp_01.png) 
+
+![screenshot](https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/Sample_WebToggleApp_02.png) 
