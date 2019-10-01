@@ -1,4 +1,69 @@
-﻿@model List<ToggleModel>
+<style>
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B03A2E;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #91D331;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #91D331;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 24px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+
+@model List<ToggleModel>
 
 @{
     ViewData["Title"] = "Settings Page";
@@ -8,7 +73,7 @@
 
 <p><font color="#616A6B">Use this page to modify the settings for your Toggles</font></p>
 
-@Html.ActionLink("Reload Toggles", "ReloadToggles", "Home", null, new { @style = "color:#B03A2E;" }) | 
+@Html.ActionLink("Reload Toggles", "ReloadToggles", "Home", null, new { @style = "color:#B03A2E;" }) |
 @Html.ActionLink("Release Toggles", "ReleaseToggles", "Home", null, new { @style = "color:#B03A2E;" })
 
 <br /><br />
@@ -24,30 +89,22 @@
         <th>
             Is Enabled
         </th>
-        <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Feature)
+                <b><font color="#2196F3">@Html.DisplayFor(modelItem => item.Feature)</font></b>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                <i>@Html.DisplayFor(modelItem => item.Description)</i>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IsEnabled)
-            </td>
-            <td>
-                @if (item.IsEnabled)
-                {
-                    @Html.ActionLink("Disable", "ToggleToOff", "Home", new { feature = item.Feature }, new { @style = "color:#B03A2E;" })
-                }
-                else
-                {
-                    @Html.ActionLink("Enable", "ToggleToOn", "Home", new { feature = item.Feature }, new { @style = "color:#239B56;" })
-                }
+                <label class="switch">
+                    <input type="checkbox" @(item.IsEnabled == true ? "checked" : "") onclick="location.href='@(item.IsEnabled == true ? @Url.Action("ToggleToOff", "Home", new { feature = item.Feature }) : @Url.Action("ToggleToOn", "Home", new { feature = item.Feature }))'">
+                    <span class="slider round"></span>
+                </label>
             </td>
         </tr>
     }
