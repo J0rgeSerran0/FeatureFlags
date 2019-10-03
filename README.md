@@ -91,15 +91,11 @@ private void AddServices(IServiceCollection services)
 
 ## Use the library on your code
 Finally, we will be ready to use the library on our code:
-else
-{
-    MyCurrentMethod();
-}
 
 ```csharp
 private readonly IToggle _toggle;
 
-public HomeController(IToggle toggle)
+public MyClass(IToggle toggle)
 {
     _toggle = toggle;
 }
