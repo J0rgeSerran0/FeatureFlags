@@ -121,7 +121,7 @@ private void MyMethodWithFeatureToggle()
     // testable through Feature Toggles
 }
 
-private void MyActualMethod()
+private void MyCurrentMethod()
 {
     // Here the actual code 
 }
