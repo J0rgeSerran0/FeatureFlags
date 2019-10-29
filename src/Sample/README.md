@@ -1,7 +1,7 @@
 # **Samples using DotNetCore.FeatureFlags**
 
 ## **<img src="https://img.shields.io/badge/.NET Standard 2.0 compatible-green" />**
-> You can use these samples with .NET Framework 4.6.1 or higer, or .NET Core and ASP.NET Core.
+> You can use these samples with .NET Framework 4.6.1 or higher, or .NET Core and ASP.NET Core.
 
 ## **<img src="https://img.shields.io/badge/Console App .NET Core 3.0-yellow" />**
 - Using **.NET Core 3.0**, this is a general sample using all features of **DotNetCore.FeatureFlags**.
