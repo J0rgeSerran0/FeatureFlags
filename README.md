@@ -2,7 +2,7 @@
 
 
 # Introduction
-Quick and easy implementation of *FeatureToggles* (**FeatureFlags**) in .NET Framework 4.6.1 or higher, .Net Core, ASP.NET Core or Azure projects.
+Quick and easy implementation of *FeatureToggles* (**FeatureFlags**) in .NET Framework 4.6.1 or higher, .Net Core 3.0, ASP.NET Core 3.0 or Azure projects.
 
 In the code you will see a sample to implement *FeatureFlags* on your .NET Core 3.x applications.
 
