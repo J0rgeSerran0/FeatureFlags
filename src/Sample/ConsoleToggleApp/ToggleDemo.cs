@@ -1,4 +1,4 @@
-﻿using DotNetCore.FeatureFlags;
+using DotNetCore.FeatureFlags;
 using System;
 
 namespace ConsoleToggleApp
@@ -36,7 +36,7 @@ namespace ConsoleToggleApp
 
             // Refresh the Toggles
             RefreshToggles();
-            
+
             // Check some Toggles to look for if they are enabled or not
             CheckTogglesStatuses();
 
@@ -85,16 +85,18 @@ namespace ConsoleToggleApp
         private void CheckIfToggleIsEnabled(string feature)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Is Enabled the Toggle '{feature}'? {_toggle.IsEnabled(feature)}");
+            Console.WriteLine($"Is Enabled the Toggle '{feature}'?");
             Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"\t{_toggle.IsEnabled(feature)}");
             Console.WriteLine();
         }
 
         private void CheckIfToggleExists(string feature)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine($"Exists the Toggle '{feature}'? {_toggle.ExistsToggle(feature)}");
+            Console.WriteLine($"Exists the Toggle '{feature}'?");
             Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine($"\t{_toggle.ExistsToggle(feature)}");
         }
 
         private void ReleaseToggles()
@@ -102,7 +104,7 @@ namespace ConsoleToggleApp
             _toggle.ReleaseToggles();
 
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("FeatureFlags Released!");
             Console.ForegroundColor = ConsoleColor.Cyan;
         }
@@ -112,7 +114,7 @@ namespace ConsoleToggleApp
             _toggle.ReloadToggles();
 
             Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("FeatureFlags Reloaded!");
             Console.ForegroundColor = ConsoleColor.Cyan;
         }
