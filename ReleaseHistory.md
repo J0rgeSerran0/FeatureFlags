@@ -38,4 +38,10 @@
 
 ----
 
+<img src="https://img.shields.io/badge/v3.1.0-green" /> <img src="https://img.shields.io/badge/10/2019-blueviolet" />
+* &nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/NEW-success" /> Added .NET Standard 2.0 compatibility to use the package with .NET Framework 4.6.1 or higher
+
+----
+
 > Return to the [Readme](README.md) file
