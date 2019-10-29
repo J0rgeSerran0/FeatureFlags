@@ -1,5 +1,8 @@
 # **Samples using DotNetCore.FeatureFlags**
 
+## **<img src="https://img.shields.io/badge/.NET Standard 2.0 compatible-green" />**
+> You can use these samples with .NET Framework 4.6.1 or higer, or .NET Core and ASP.NET Core.
+
 ## **<img src="https://img.shields.io/badge/Console App .NET Core 3.0-yellow" />**
 - Using **.NET Core 3.0**, this is a general sample using all features of **DotNetCore.FeatureFlags**.
 - The source code of this app can be found in the [**ConsoleToggleApp**](https://github.com/J0rgeSerran0/FeatureFlags/tree/master/src/Sample/ConsoleToggleApp) folder.
