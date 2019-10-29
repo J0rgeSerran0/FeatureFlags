@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFrameworks>netcoreapp3.0;netstandard20</TargetFrameworks>
     <Authors>Jorge Serrano</Authors>
-    <Description>Quick and easy implementation of Feature Toggles or Feature Flags in .Net Core 3.0, ASP.NET Core 3.0 or Azure projects</Description>
+    <Description>Quick and easy implementation of Feature Toggles or Feature Flags in .NET Framework 4.6.1 or higher, .Net Core 3.0, ASP.NET Core 3.0 or Azure projects</Description>
     <PackageProjectUrl>https://github.com/J0rgeSerran0/FeatureFlags</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/J0rgeSerran0/FeatureFlags/master/images/icon_toggle.png</PackageIconUrl>
+    <PackageIcon>icon_toggle.png</PackageIcon>
     <RepositoryUrl>https://github.com/J0rgeSerran0/FeatureFlags</RepositoryUrl>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>3.0.1</Version>
-    <PackageReleaseNotes>Now, the IsEnabled property is not readonly to give more flexibility</PackageReleaseNotes>
+    <Version>3.1.0</Version>
+    <PackageReleaseNotes>Added .NET Standard 2.0 compatibility</PackageReleaseNotes>
     <PackageTags>FeatureToggles, FeatureFlags, Toggles, Flag, Toggle</PackageTags>
     <PackageId>DotNetCore.FeatureFlags</PackageId>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -18,5 +18,9 @@
   <Target Name="CopyPackage" AfterTargets="Pack">
     <Move SourceFiles="$(OutputPath)..\$(PackageId).$(PackageVersion).nupkg" DestinationFolder="..\..\build\Packages" />
   </Target>
+
+  <ItemGroup>
+    <None Include="icon_toggle.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 
 </Project>
