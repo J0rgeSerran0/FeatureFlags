@@ -1,5 +1,8 @@
 # **DotNetCore.FeatureFlags**
 
+[![Nuget](https://img.shields.io/nuget/v/DotNetCore.FeatureFlags?label=DotNetCore.FeatureFlags)](https://www.nuget.org/packages/DotNetCore.FeatureFlags/) ![Issues](https://img.shields.io/github/issues/J0rgeSerran0/FeatureFlags?color=B22DFF) 
+![Issues Pull Requests](https://img.shields.io/github/issues-pr/J0rgeSerran0/FeatureFlags?color=B22DFF)
+
 
 # Introduction
 Quick and easy implementation of *FeatureToggles* (**FeatureFlags**) in .NET Framework 4.6.1 or higher, .NET Core 2.x, .NET Core 3.0, ASP.NET Core 2.x, ASP.NET Core 3.0 or Azure projects.
