@@ -141,7 +141,7 @@ There are some samples using this NuGet Package.
 You will find the  samples [here](https://github.com/J0rgeSerran0/FeatureFlags/tree/master/src/Sample)
 
 # NuGet Package
-You can install the [Nuget Package of *DotNEtCore.FeatureFlags* from here](https://www.nuget.org/packages/DotNetCore.FeatureFlags/)
+You can install the [Nuget Package of *DotNetCore.FeatureFlags* from here](https://www.nuget.org/packages/DotNetCore.FeatureFlags/)
 
 # References
 [FeatureToggle of Martin Fowler](https://martinfowler.com/bliki/FeatureToggle.html)
