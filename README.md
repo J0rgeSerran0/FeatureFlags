@@ -1,7 +1,7 @@
 # **DotNetCore.FeatureFlags**
 
 [![Nuget](https://img.shields.io/nuget/v/DotNetCore.FeatureFlags?label=DotNetCore.FeatureFlags)](https://www.nuget.org/packages/DotNetCore.FeatureFlags/) ![Issues](https://img.shields.io/github/issues/J0rgeSerran0/FeatureFlags?color=B22DFF) 
-![Issues Pull Requests](https://img.shields.io/github/issues-pr/J0rgeSerran0/FeatureFlags?color=B22DFF)
+![Issues Pull Requests](https://img.shields.io/github/issues-pr/J0rgeSerran0/FeatureFlags?color=B22DFF) ![Downloads](https://img.shields.io/nuget/dt/DotNetCore.FeatureFlags?label=Downloads)
 
 
 # Introduction
